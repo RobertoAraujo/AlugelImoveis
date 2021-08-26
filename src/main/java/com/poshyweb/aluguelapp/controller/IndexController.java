@@ -12,4 +12,29 @@ public class IndexController {
 		return "index";
 	}
 
+	@RequestMapping(path = "/dist/index", method = RequestMethod.GET)
+	public String paginaDistIndex() {
+		return "dist/index";
+	}
+	
+	@RequestMapping(path = "/dist/charts", method = RequestMethod.GET)
+	public String paginaDistCharts() {
+		return "dist/index";
+	}
+	
+	@RequestMapping(path = "/dist/layout-sidenav-light", method = RequestMethod.GET)
+	public String paginaDistlayoutsidenavlight() {
+		return "dist/layout-sidenav-light";
+	}
+	
+	@RequestMapping(path = "/dist/layout-static", method = RequestMethod.GET)
+	public String paginaDistlayoutstatic() {
+		return "dist/layout-static";
+	}
+	
+	@RequestMapping(path = "/dist/login", method = RequestMethod.GET)
+	public String paginaDistlogin() {
+		return "dist/login";
+	}
+
 }
