@@ -13,7 +13,9 @@
 		<script th:src="@{/js/bootstrap.min.js}"></script>
         <script th:src="@{/js/jquery.min.js}"></script>
 		<script th:src="@{/js/bootstrap.min.js}"></script>
-		        
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+		 
+		     
 		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 		<link rel="stylesheet" th:href="@{/css/all.css}">
 		<link rel="stylesheet" th:href="@{/css/styles.css}">
@@ -162,26 +164,29 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area mr-1"></i>
-                                        Area Chart Example
+                                        Exemplo de gráfico de área
                                     </div>
                                     <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
+                            
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar mr-1"></i>
-                                        Bar Chart Example
+                                        Exemplo de gráfico de barras
                                     </div>
                                     <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
@@ -260,9 +265,56 @@
                                                 <td>2011/03/21</td>
                                                 <td>$356,250</td>
                                             </tr>
-
+											<tr>
+                                                <td>Hermione Butler</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2011/03/21</td>
+                                                <td>$356,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hermione Butler</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2011/03/21</td>
+                                                <td>$356,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hermione Butler</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2011/03/21</td>
+                                                <td>$356,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hermione Butler</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2011/03/21</td>
+                                                <td>$356,250</td>
+                                            </tr>
+                                            
                                         </tbody>
                                     </table>
+                                    <!-- Paginação  -->
+                                    <nav aria-label="Navegação de página exemplo">
+									  <ul class="pagination justify-content-center">
+									    <li class="page-item disabled">
+									      <a class="page-link" href="#" tabindex="-1">Anterior</a>
+									    </li>
+									    <li class="page-item"><a class="page-link" href="#">1</a></li>
+									    <li class="page-item"><a class="page-link" href="#">2</a></li>
+									    <li class="page-item"><a class="page-link" href="#">3</a></li>
+									    <li class="page-item">
+									      <a class="page-link" href="#">Próximo</a>
+									    </li>
+									  </ul>
+									</nav>	
+																	
                                 </div>
                             </div>
                         </div>
@@ -290,7 +342,8 @@
         <script th:src="@{/js/jquery.dataTables.min.js}"></script>
         <script th:src="@{/js/dataTables.bootstrap4.min.js}"></script> 
          
-      
+      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> 
    
     
         <script th:src="@{/assets/demo/chart-area-demo.js}"></script>
