@@ -8,14 +8,15 @@
         <meta name="author" content="" />
         <title>Admin</title>
         
+         <script th:src="@{/js/scripts.js}"></script>
         <script th:src="@{/js/jquery-3.2.1.slim.min.js}"></script>
 		<script th:src="@{/js/popper.min.js}"></script>
 		<script th:src="@{/js/bootstrap.min.js}"></script>
         <script th:src="@{/js/jquery.min.js}"></script>
 		<script th:src="@{/js/bootstrap.min.js}"></script>
-		 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+		
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 		 
-		     
 		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 		<link rel="stylesheet" th:href="@{/css/all.css}">
 		<link rel="stylesheet" th:href="@{/css/styles.css}">
@@ -41,9 +42,9 @@
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <a class="dropdown-item" th:href="@{/}">Definições</a>
-                        <a class="dropdown-item" th:href="@{/register}">Registro de Atividade</a>
+                        <a class="dropdown-item" th:href="@{/dist/register}">Registro de Atividade</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" th:href="@{login}">Sair</a>
+                        <a class="dropdown-item" th:href="@{/dist/login}">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -55,7 +56,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             
-                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                             <a class="nav-link collapsed" href="1" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Painel
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -67,19 +68,8 @@
                                 </nav>
                             </div>
                             
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Teste
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" th:href="@{layout-static}">Static Navigation</a>
-                                    <a class="nav-link" th:href="@{layout-sidenav-light}">Light Sidenav</a>
-                                </nav>
-                            </div>
                             
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="2" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Descrição
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -90,6 +80,7 @@
                                     <a class="nav-link" th:href="@{layout-sidenav-light}">Light Sidenav</a>
                                 </nav>
                             </div>
+                            
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Páginas
@@ -121,6 +112,8 @@
                                     </div>
                                 </nav>
                             </div>
+                            
+                            
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" th:href="@{charts.html}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
@@ -218,54 +211,121 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Name Inquilino</th>
+                                                <th>Local do imovél </th>
+                                                <th>Comodos</th>
+                                                <th>Data inicio</th>
+                                                <th>Em dia</th>
+                                                <th>Data Fim</th>
+                                                <th>Valor</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot>
+                                        
                                         <tbody>
-                                           
                                             <tr>
                                                 <td>Hope Fuentes</td>
                                                 <td>Secretary</td>
                                                 <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                           	<tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
                                                 <td>41</td>
                                                 <td>2010/02/12</td>
                                                 <td>$109,850</td>
                                             </tr>
                                             <tr>
-                                                <td>Finn Camacho</td>
-                                                <td>Support Engineer</td>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
                                                 <td>San Francisco</td>
-                                                <td>47</td>
-                                                <td>2009/07/07</td>
-                                                <td>$87,500</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
                                             </tr>
                                             <tr>
-                                                <td>Serge Baldwin</td>
-                                                <td>Data Coordinator</td>
-                                                <td>Singapore</td>
-                                                <td>64</td>
-                                                <td>2012/04/09</td>
-                                                <td>$138,575</td>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
                                             </tr>
+                                            <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                             <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                             <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>2010/02/12</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+   
    
                                         </tbody>
                                     </table>
-                                    <!-- Paginação  -->
+                                    <!-- Paginação  
                                     <nav aria-label="Navegação de página exemplo">
 									  <ul class="pagination justify-content-center">
 									    <li class="page-item disabled">
@@ -279,18 +339,19 @@
 									    </li>
 									  </ul>
 									</nav>	
-																	
+										-->							
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                            <div class="text-muted">Copyright &copy; System 2021</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="#">Roberto/Araujo</a>
                                 &middot;
                                 <a href="#">Terms &amp; Conditions</a>
                             </div>
@@ -306,11 +367,8 @@
         <script th:src="@{/js/Chart.min.js}"></script>
         <script th:src="@{/js/jquery.dataTables.min.js}"></script>
         <script th:src="@{/js/dataTables.bootstrap4.min.js}"></script> 
-         
-      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> 
-   
     
+  
         <script th:src="@{/assets/demo/chart-area-demo.js}"></script>
         <script th:src="@{/assets/demo/chart-bar-demo.js}"></script>
         <script th:src="@{/assets/demo/datatables-demo.js}"></script>
