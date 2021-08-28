@@ -9,7 +9,7 @@ public class IndexController {
 	
 	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public String paginaInicial() {
-		return "index";
+		return "dist/login";
 	}
 
 	@RequestMapping(path = "/dist/index", method = RequestMethod.GET)
@@ -35,6 +35,21 @@ public class IndexController {
 	@RequestMapping(path = "/dist/login", method = RequestMethod.GET)
 	public String paginaDistlogin() {
 		return "dist/login";
+	}
+	
+	@RequestMapping(path = "/dist/register", method = RequestMethod.GET)
+	public String paginaDistRegister() {
+		return "dist/register";
+	}
+	
+	@RequestMapping(path = "/dist/password", method = RequestMethod.GET)
+	public String paginaDistpassword() {
+		return "dist/password";
+	}
+	
+	@RequestMapping(path = "/dist/administracao", method = RequestMethod.GET)
+	public String paginaDistAdministracao() {
+		return "dist/administracao";
 	}
 
 }

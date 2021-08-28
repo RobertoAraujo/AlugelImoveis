@@ -7,6 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Painel</title>
+        
         <link th:href="@{/css/styles.css}" rel="stylesheet" />
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
@@ -42,17 +43,17 @@
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
                                                     <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
-                                                    <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
+                                                    <label class="custom-control-label" for="rememberPasswordCheck">Lembre-se de senha</label>
                                                 </div>
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
-                                                <a class="btn btn-primary" href="index.html">Login</a>
+                                                <a class="small" th:href="@{/dist/password}">Esqueceu sua senha?</a>
+                                                <a class="btn btn-primary" th:href="@{/dist/index}">Login</a>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a th:href="@{register}">Need an account? Sign up!</a></div>
+                                        <div class="small"><a th:href="@{/dist/register}">Precisa de uma conta? Inscrever-se!</a></div>
                                     </div>
                                 </div>
                             </div>
