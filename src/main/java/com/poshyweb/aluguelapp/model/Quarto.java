@@ -4,6 +4,6 @@ public class Quarto {
 	
 	private int comodos;
 	private String descricao;
-	
+	private String disponibilidade;
 
 }
