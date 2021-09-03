@@ -54,16 +54,16 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <div class="sb-sidenav-menu-heading">Menu de paginas</div>
                             <a class="nav-link" th:href="@{index}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Painel
                             </a>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Layouts
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>Logout
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
@@ -102,14 +102,24 @@
                                     </div>
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <div class="sb-sidenav-menu-heading">Menu de Gráficos</div>
                             <a class="nav-link" th:href="@{charts.html}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
+                                Grafico de barras
                             </a>
                             <a class="nav-link" th:href="@{tables.html}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                                Grafico de Tentencias
+                            </a>
+                            
+                            <div class="sb-sidenav-menu-heading">Menu de Relatorios</div>
+                            <a class="nav-link" th:href="@{charts.html}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                15 Dias
+                            </a>
+                            <a class="nav-link" th:href="@{tables.html}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                30 Dias
                             </a>
                         </div>
                     </div>
@@ -122,10 +132,8 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
+                        <h1 class="mt-4"> </h1>
+                       
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
