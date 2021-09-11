@@ -2422,7 +2422,7 @@ textarea.form-control {
     justify-content: center;
   }
   .form-inline .custom-control-label {
-    margin-bottom: 0;
+    margin-bottom: 10;
   }
 }
 
