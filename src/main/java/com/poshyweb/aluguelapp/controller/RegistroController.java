@@ -22,4 +22,8 @@ public class RegistroController {
 		return new ModelAndView("/dist/register");
 	}
 	
+
+
+
+
 }
