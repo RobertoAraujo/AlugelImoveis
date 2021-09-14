@@ -34,34 +34,37 @@
 						<div class="col-lg-7">
 							<div class="card shadow-lg border-0 rounded-lg mt-5">
 								<div class="card-header">
-									<h3 class="text-center font-weight-light my-4">c Quartos</h3>
+									<h3 class="text-center font-weight-light my-4"> Quartos</h3>
 								</div>
 								<div class="card-body">
 								
 									<form method="POST">
 									
 										<div class="form-group">
-											<label class="small mb-1" for="inputEmailAddress">Nome Completo</label>
-											<input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="" name="primeiroNome" />
+											<label class="small mb-1" for="inputEmailAddress">Comodos</label>
+											<input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="" name="comodos" />
 										</div>
 
 										
 										
 										 <div class="form-group">
 										    <label for="exampleFormControlTextarea1">Descrição </label>
-										    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="1 quarto, 1 banheiro, 1 suite, 1 sala, 1 cozinha" rows="3"></textarea>
+										    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="1 quarto, 1 banheiro, 1 suite, 1 sala, 1 cozinha" rows="3" name="descricao"></textarea>
 										  </div>
 										
-										<div class="form-group">
-												<label for="inputState">Selecione o quarto </label> 
+										<!-- <div class="form-group">
+											<label class="small mb-1" for="inputEmailAddress">Disponibilidade</label>
+											<input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="" name="disponibilidade" />
+										</div> -->
+
+								        <div class="form-group">
+												<label for="inputState">Disponibilidade </label> 
 												<select id="inputState" name="tipoUsuarios" class="form-control">
 													<option selected>Escolha...</option>
-													<option value="1">Sim</option>
-													<option value="2">Não</option>
+													<option value="sim">Sim</option>
+													<option value="não">Não</option>
 												</select>
 										</div>
-
-								          
 										
 										<div class="form-group mt-4 mb-0">
 											<button type="submit" class="btn btn-primary btn-lg btn-block"> Enviar Cadastro </button>
