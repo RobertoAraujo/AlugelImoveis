@@ -21,6 +21,7 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
+
 </head>
 <body class="bg-primary">
 	<div id="layoutAuthentication">
@@ -31,50 +32,100 @@
 						<div class="col-lg-7">
 							<div class="card shadow-lg border-0 rounded-lg mt-5">
 								<div class="card-header">
-									<h3 class="text-center font-weight-light my-4">Criar Conta</h3>
+									<h3 class="text-center font-weight-light my-4">Criar Inquilino</h3>
 								</div>
 								<div class="card-body">
 								
 									<form method="POST">
-										<div class="form-row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label class="small mb-1" for="inputFirstName">Primeiro
-														nome</label> <input class="form-control py-4" id="inputFirstName"
-														type="text" placeholder="Enter first name" name="primeiroNome" />
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label class="small mb-1" for="inputLastName">Último
-														nome</label> <input class="form-control py-4" id="inputLastName"
-														type="text" placeholder="Enter last name" name="ultimoNome"/>
-												</div>
-											</div>
+									
+										<div class="form-group">
+											<label class="small mb-1" for="inputEmailAddress">Nome Completo</label>
+											<input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="" name="primeiroNome" />
 										</div>
+
+										<div class="form-group">
+											<label for="inputState">Dependentes </label> 
+												<select id="inputState" name="tipoUsuarios" class="form-control">
+													<option selected>Escolha...</option>
+													<option value="1">Sim</option>
+													<option value="2">Não</option>
+												</select>
+										</div>
+										
+										 <div class="form-group">
+										    <label for="exampleFormControlTextarea1">Descrição </label>
+										    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+										  </div>
+										
+										<div class="form-group">
+												<label for="inputState">Selecione o quarto </label> 
+												<select id="inputState" name="tipoUsuarios" class="form-control">
+													<option selected>Escolha...</option>
+													<option value="1">01</option>
+													<option value="2">02</option>
+												</select>
+										</div>
+											
 										<div class="form-group">
 											<label class="small mb-1" for="inputEmailAddress">Email</label>
 											<input class="form-control py-4" id="inputEmailAddress"
 												type="email" aria-describedby="emailHelp"
-												placeholder="Enter email address" name="email"/>
+												placeholder="" name="email"/>
 										</div>
+										
 										<div class="form-row">
 											<div class="col-md-12">
 												<div class="form-group">
 													<label class="small mb-1" for="inputPassword">Senha</label>
 													<input class="form-control py-4" id="inputPassword"
-														type="password" placeholder="Enter password" name="senha" />
+														type="password" placeholder="" name="senha" />
 												</div>
 											</div>
 											
 											<div class="form-group col-md-12">
-												<label for="inputState">State</label> 
+												<label for="inputState">Tipo de Usuario </label> 
 												<select id="inputState" name="tipoUsuarios" class="form-control">
 													<option selected>Escolha...</option>
-													<option value="1">Inquilino</option>
+													<option value="1">Cliente</option>
 													<option value="2">Administrador</option>
 												</select>
 											</div>
+											
+											<div class="form-group col-md-12">
+												<label for="inputState">Contrato </label> 
+												<select id="inputState" name="tipoUsuarios" class="form-control">
+													<option selected>Escolha...</option>
+													<option value="1">Sim</option>
+													<option value="2">Não</option>
+												</select>
+											</div>
+
+											<div class='col-md-6'>
+								            <div class="form-group">
+								                <label for="data-pagamento">Entrada</label>
+								                <!-- Datepicker as text field -->         
+								                <div class="input-group date" id="data1" data-date-format="dd/mm/yyyy">
+								                  <input  type="text" class="form-control" placeholder="">
+								                  <div class="input-group-addon" >
+								                    <span class="glyphicon glyphicon-th"></span>
+								                  </div>
+								                </div>
+								            </div>
+								          </div>
+								          
+								          <div class='col-md-6'>
+								            <div class="form-group">
+								                <label for="data-pagamento">Saida</label>
+								                <!-- Datepicker as text field -->         
+								                <div class="input-group date" data-date-format="dd/mm/yyyy">
+								                  <input  type="text" class="form-control" id="data2" placeholder="">
+								                  <div class="input-group-addon" >
+								                    <span class="glyphicon glyphicon-th"></span>
+								                  </div>
+								                </div>
+								            </div>
+								          </div>
+								          
 										</div>
 										<div class="form-group mt-4 mb-0">
 											<button type="submit" class="btn btn-primary btn-lg btn-block"> Enviar Cadastro </button>
@@ -93,6 +144,7 @@
 				</div>
 			</main>
 		</div>
+		<br>
 		<div id="layoutAuthentication_footer">
 			<footer class="py-4 bg-light mt-auto">
 				<div class="container-fluid">
@@ -109,5 +161,15 @@
 		</div>
 	</div>
 
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin pro Datapicker novo -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js'></script>
+    <script>
+     $('#data1').datepicker({format: "dd/mm/yyyy"});
+     $('#data2').datepicker({format: "dd/mm/yyyy"});
+    </script>
 </body>
 </html>

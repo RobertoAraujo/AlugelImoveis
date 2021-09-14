@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class CadastroController {
 	
-	@RequestMapping (path = "cadastroInquilino", method =  RequestMethod.GET)
+	@RequestMapping (path = "dist/cadastroInquilino", method =  RequestMethod.GET)
 	public String  chamaCadastro() {
-		return "cadastroInquilino";
+		return "dist/cadastroInquilino";
 	}
 }
