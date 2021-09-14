@@ -45,29 +45,17 @@
 											<input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="" name="comodos" />
 										</div>
 
-										
-										
 										 <div class="form-group">
 										    <label for="exampleFormControlTextarea1">Descrição </label>
 										    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="1 quarto, 1 banheiro, 1 suite, 1 sala, 1 cozinha" rows="3" name="descricao"></textarea>
 										  </div>
 										
-										<!-- <div class="form-group">
-											<label class="small mb-1" for="inputEmailAddress">Disponibilidade</label>
-											<input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="" name="disponibilidade" />
-										</div> -->
-
-										<select name="quarto" th:field="*{quarto}">
-									        <option th:each="quarto : ${T(com.frontbackend.thymeleaf.enums.model.Enums).values()}"
-									                th:value="${quarto}" th:text="${quarto}"></option>
-									    </select>
-    
 								        <div class="form-group">
 												<label for="inputState">Disponibilidade </label> 
-												<select id="inputState" name="tipoUsuarios" class="form-control">
+												<select id="inputState" name="disponibilidade" class="form-control">
 													<option selected>Escolha...</option>
-													<option value="sim">Sim</option>
-													<option value="não">Não</option>
+													<option value="Sim">Sim</option>
+													<option value="Não">Não</option>
 												</select>
 										</div>
 										

@@ -49,8 +49,8 @@
 											<label for="inputState">Dependentes </label> 
 												<select id="inputState" name="tipoUsuarios" class="form-control">
 													<option selected>Escolha...</option>
-													<option value="1">Sim</option>
-													<option value="2">Não</option>
+													<option value="Sim">Sim</option>
+													<option value="Não">Não</option>
 												</select>
 										</div>
 										
@@ -97,10 +97,14 @@
 												<label for="inputState">Contrato </label> 
 												<select id="inputState" name="tipoUsuarios" class="form-control">
 													<option selected>Escolha...</option>
-													<option value="1">Sim</option>
-													<option value="2">Não</option>
+													<option value="Sim">Sim</option>
+													<option value="Não">Não</option>
 												</select>
 											</div>
+
+											<!--  <select th:field="*{type}">
+											  <option th:each="type : ${allTypes}"  th:value="${type}" th:text="#{${'seedstarter.type.' + type}}">Wireframe</option>
+											</select>-->
 
 											<div class='col-md-6'>
 								            <div class="form-group">

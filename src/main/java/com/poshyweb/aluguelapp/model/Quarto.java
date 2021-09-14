@@ -24,8 +24,8 @@ public class Quarto implements Serializable{
 	@Column
 	private String descricao;
 	@Column
-	private  Disponibilidade disponibilidade;
-//	private String disponibilidade;
+//	private  Disponibilidade disponibilidade;
+	private String disponibilidade;
 	public Long getId() {
 		return id;
 	}
@@ -44,10 +44,16 @@ public class Quarto implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Disponibilidade getDisponibilidade() {
+//	public Disponibilidade getDisponibilidade() {
+//		return disponibilidade;
+//	}
+//	public void setDisponibilidade(Disponibilidade disponibilidade) {
+//		this.disponibilidade = disponibilidade;
+//	}
+	public String getDisponibilidade() {
 		return disponibilidade;
 	}
-	public void setDisponibilidade(Disponibilidade disponibilidade) {
+	public void setDisponibilidade(String disponibilidade) {
 		this.disponibilidade = disponibilidade;
 	}
 	@Override
