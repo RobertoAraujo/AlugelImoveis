@@ -24,7 +24,7 @@ public class Quarto implements Serializable{
 	@Column
 	private String descricao;
 	@Column
-	private  Enums disponibilidade;
+	private  Disponibilidade disponibilidade;
 //	private String disponibilidade;
 	public Long getId() {
 		return id;
@@ -44,10 +44,10 @@ public class Quarto implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Enums getDisponibilidade() {
+	public Disponibilidade getDisponibilidade() {
 		return disponibilidade;
 	}
-	public void setDisponibilidade(Enums disponibilidade) {
+	public void setDisponibilidade(Disponibilidade disponibilidade) {
 		this.disponibilidade = disponibilidade;
 	}
 	@Override

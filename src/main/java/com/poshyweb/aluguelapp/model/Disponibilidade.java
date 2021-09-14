@@ -1,5 +1,5 @@
 package com.poshyweb.aluguelapp.model;
 
-public enum Enums {
+public enum Disponibilidade {
 	Sim , Não
 }
