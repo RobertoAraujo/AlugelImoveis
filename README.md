@@ -1,6 +1,6 @@
 ### App de Alugel de Imoveis 
 
-o projeto se encontra em fase de desenvolvimento esta em a templet completa .
+o projeto se encontra-se em fase de desenvolvimento.
 ![image](https://user-images.githubusercontent.com/34004001/133292670-c83c6330-c5a5-4f1a-a8f3-fa15b085a767.png)
 ![image](https://user-images.githubusercontent.com/34004001/132954620-2235c700-f5a9-478e-9ba4-c6e0bb4ae6b6.png)
 ![image](https://user-images.githubusercontent.com/34004001/132954637-b0c7ba62-4bdb-49f0-8ebf-a4ab2af2dca0.png)
