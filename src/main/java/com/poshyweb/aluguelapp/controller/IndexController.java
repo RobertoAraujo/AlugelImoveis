@@ -51,5 +51,10 @@ public class IndexController {
 	public String paginaDistAdministracao() {
 		return "dist/administracao";
 	}
+	
+	@RequestMapping(path = "/dist/inquilino", method = RequestMethod.GET)
+	public String paginaDistInquilino() {
+		return "dist/inquilino";
+	}
 
 }
