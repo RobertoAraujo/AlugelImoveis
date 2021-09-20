@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Page Title - SB Admin</title>
+<link th:href="@{/css/styles.css}" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css" rel="stylesheet"/>
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+</head>
+<body class="bg-primary">
+	<div id="layoutAuthentication">
+		<div id="layoutAuthentication_content">
+			<main>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-7">
+							<div class="card shadow-lg border-0 rounded-lg mt-5">
+								<div class="card-header">
+									<h3 class="text-center font-weight-light my-4">Criar Inquilino</h3>
+								</div>
+								<div class="card-body">
+								
+									<form method="POST">
+									
+										<div class="form-group">
+											<label class="small mb-1" for="inputEmailAddress">Nome Completo</label>
+											<input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="" name="primeiroNome" />
+										</div>
+
+										<div class="form-group">
+											<label for="inputState">Dependentes </label> 
+												<select id="inputState" name="tipoUsuarios" class="form-control">
+													<option selected>Escolha...</option>
+													<option value="Sim">Sim</option>
+													<option value="Não">Não</option>
+												</select>
+										</div>
+										
+										 <div class="form-group">
+										    <label for="exampleFormControlTextarea1">Descrição </label>
+										    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="1 Menino 1 Menina se tiver animais domesticos favor cadastra aqui." rows="3"></textarea>
+										  </div>
+										
+										<div class="form-group">
+												<label for="inputState">Selecione o quarto </label> 
+												<select id="inputState" name="tipoUsuarios" class="form-control">
+													<option selected>Escolha...</option>
+													<option value="1">01</option>
+													<option value="2">02</option>
+												</select>
+										</div>
+											
+										<div class="form-group">
+											<label class="small mb-1" for="inputEmailAddress">Email</label>
+											<input class="form-control py-4" id="inputEmailAddress"
+												type="email" aria-describedby="emailHelp"
+												placeholder="" name="email"/>
+										</div>
+										
+										<div class="form-row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label class="small mb-1" for="inputPassword">Senha</label>
+													<input class="form-control py-4" id="inputPassword"
+														type="password" placeholder="" name="senha" />
+												</div>
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label for="inputState">Tipo de Usuario </label> 
+												<select id="inputState" name="tipoUsuarios" class="form-control">
+													<option selected>Escolha...</option>
+													<option value="1">Cliente</option>
+													<option value="2">Administrador</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label for="inputState">Contrato </label> 
+												<select id="inputState" name="tipoUsuarios" class="form-control">
+													<option selected>Escolha...</option>
+													<option value="Sim">Sim</option>
+													<option value="Não">Não</option>
+												</select>
+											</div>
+
+											<!--  <select th:field="*{type}">
+											  <option th:each="type : ${allTypes}"  th:value="${type}" th:text="#{${'seedstarter.type.' + type}}">Wireframe</option>
+											</select>-->
+
+											<div class='col-md-6'>
+								            <div class="form-group">
+								                <label for="data-pagamento">Entrada</label>
+								                <!-- Datepicker as text field -->         
+								                <div class="input-group date" id="data1" data-date-format="dd/mm/yyyy">
+								                  <input  type="text" class="form-control" placeholder="">
+								                  <div class="input-group-addon" >
+								                    <span class="glyphicon glyphicon-th"></span>
+								                  </div>
+								                </div>
+								            </div>
+								          </div>
+								          
+								          <div class='col-md-6'>
+								            <div class="form-group">
+								                <label for="data-pagamento">Saida</label>
+								                <!-- Datepicker as text field -->         
+								                <div class="input-group date" data-date-format="dd/mm/yyyy">
+								                  <input  type="text" class="form-control" id="data2" placeholder="">
+								                  <div class="input-group-addon" >
+								                    <span class="glyphicon glyphicon-th"></span>
+								                  </div>
+								                </div>
+								            </div>
+								          </div>
+								          
+										</div>
+										<div class="form-group mt-4 mb-0">
+											<button type="submit" class="btn btn-primary btn-lg btn-block"> Enviar Cadastro </button>
+										</div>
+									</form>
+									
+								</div>
+								<div class="card-footer text-center">
+									<div class="small">
+										<a th:href="@{login}">Ter uma conta? Vá para o login</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<br>
+		<div id="layoutAuthentication_footer">
+			<footer class="py-4 bg-light mt-auto">
+				<div class="container-fluid">
+					<div
+						class="d-flex align-items-center justify-content-between small">
+						<div class="text-muted">Copyright &copy; Your Website 2020</div>
+						<div>
+							<a href="#">Privacy Policy</a> &middot; <a href="#">Terms
+								&amp; Conditions</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+    <script type="text/javascript">
+	    $( "#data1" ).datepicker({ format: "dd-mm-yyyy", language: "pt-BR" });
+	    $( "#data2" ).datepicker({ format: "dd-mm-yyyy", language: "pt-BR" });
+    </script>
+</body>
+</html>
