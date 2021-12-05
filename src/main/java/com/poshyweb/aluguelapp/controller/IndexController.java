@@ -1,15 +1,42 @@
 package com.poshyweb.aluguelapp.controller;
 
+import com.poshyweb.aluguelapp.dto.UsuarioDto;
+import com.poshyweb.aluguelapp.model.Usuario;
+import com.poshyweb.aluguelapp.server.UsuariosService;
+import org.hibernate.ObjectNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class IndexController {
+
+	@Autowired
+	private UsuariosService servico;
+
 	// tela de login
 	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public String paginaInicial() {
 		return "dist/login";
+	}
+
+	@RequestMapping(path = "/listar-usuarios", method = RequestMethod.GET)
+	public ResponseEntity<List<UsuarioDto>> findAll(@RequestParam(value ="usuario", defaultValue ="0") Long id_cat) throws ObjectNotFoundException {
+		List<UsuarioDto> list = servico.findAll();
+		//converte de lista de livro em lista de livros dto
+		List<UsuarioDto> listDTO = list.stream().map(objUsuario -> new UsuarioDto(objUsuario)).collect(Collectors.toList());
+		//return ResponseEntity.ok().body(objProduto);
+		return ResponseEntity.ok().body(listDTO);
+	}
+
+	@GetMapping (value = "/{id}")// busca geral
+	public ResponseEntity<Usuario> findById(@PathVariable Long id) throws ObjectNotFoundException {
+		Usuario objUsuario = servico.findById(id);
+		return ResponseEntity.ok().body(objUsuario);
 	}
 
 	@RequestMapping(path = "/dist/index", method = RequestMethod.GET)
