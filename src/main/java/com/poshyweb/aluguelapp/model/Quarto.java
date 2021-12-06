@@ -9,7 +9,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * Roberto A Moraes
+ * https://github.com/RobertoAraujo
+ * 06/12/2021
+ */
 @Entity
 @Table(name = "quarto")
 public class Quarto implements Serializable{
