@@ -14,8 +14,8 @@ import javax.persistence.Table;
  * https://github.com/RobertoAraujo
  * 06/12/2021
  */
+
 @Entity
-@Table(name = "quarto")
 public class Quarto implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -28,9 +28,8 @@ public class Quarto implements Serializable{
 	@Column
 	private String descricao;
 	@Column
-
-//	private  Disponibilidade disponibilidade;
 	private String disponibilidade;
+
 	public Long getId() {
 		return id;
 	}

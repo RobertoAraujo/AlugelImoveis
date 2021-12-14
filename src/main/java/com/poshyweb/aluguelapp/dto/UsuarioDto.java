@@ -14,7 +14,7 @@ public class UsuarioDto implements Serializable {
     private String senha;
     private int tipoUsuarios;
 
-    public UsuarioDto() {
+    public UsuarioDto(UsuarioDto objUsuario) {
 
     }
 

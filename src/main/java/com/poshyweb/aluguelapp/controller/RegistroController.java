@@ -21,8 +21,8 @@ public class RegistroController {
 		usuarioRepository.save(usuario);
 		return new ModelAndView("/dist/register");
 	}
-	
 
+	
 
 
 

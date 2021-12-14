@@ -1,5 +1,7 @@
 package com.poshyweb.aluguelapp.controller;
 
+import com.poshyweb.aluguelapp.dto.QuartoDto;
+import com.poshyweb.aluguelapp.server.QuartoServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,23 +9,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.poshyweb.aluguelapp.model.Quarto;
-import com.poshyweb.aluguelapp.repository.QuartosRepository;
 
 @Controller
 public class QuartoController {
 	
 	@Autowired
-	private QuartosRepository quartosRepository;
-	
-	@RequestMapping (path = "dist/cadastroQuartos", method = RequestMethod.GET)
-	private String  cadstroQuartos() {
-		return "dist/cadastroQuartos";
+	private QuartoServer server;
+
+	@RequestMapping (path = "dist/lista-de-quartos", method = RequestMethod.GET)
+	private String  listarQuartos() {
+		return "dist/lista-de-quartos";
 	}
-	
-	@RequestMapping (path = "dist/cadastroQuartos", method = RequestMethod.POST)
+
+	@RequestMapping (path = "dist/cadastro-de-quarto", method = RequestMethod.POST)
 	public ModelAndView inserirCadstroQuartos(Quarto quarto) {
-		quartosRepository.save(quarto);
-		return new ModelAndView("dist/cadastroQuartos");
-		
+		return new ModelAndView("dist/cadastro-de-quarto");
+
 	}
+
 }

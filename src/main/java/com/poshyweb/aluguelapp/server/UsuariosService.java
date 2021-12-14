@@ -27,6 +27,10 @@ public class UsuariosService {
 		return null;
     }
 
+    public Usuario findById(Long id) {
+		return null;
+    }
+
 //	public Usuario findById(Long id) {
 //		Optional<Usuario> objUsuario = repository.findById(id);
 //		Usuario usuario = objUsuario.orElseThrow(() -> new ObjectNotFoundException("Produto não encontrado!  id:" + id + " tipo: " + Usuario.class.getName()));
