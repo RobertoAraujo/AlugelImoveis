@@ -17,9 +17,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "quarto")
 public class Quarto implements Serializable{
-	
 	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

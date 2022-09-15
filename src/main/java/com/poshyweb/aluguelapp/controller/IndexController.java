@@ -18,23 +18,23 @@ public class IndexController {
 	@Autowired
 	private UsuariosService servico;
 
-	// tela de login
 	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public String paginaInicial() {
 		return "dist/login";
 	}
 
 	@RequestMapping(path = "/listar-usuarios", method = RequestMethod.GET)
-	public ResponseEntity<List<UsuarioDto>> findAll(@RequestParam(value ="usuario", defaultValue ="0") Long id_cat) throws ObjectNotFoundException {
+	public ResponseEntity<List<UsuarioDto>> findAll(@RequestParam(value ="usuario", defaultValue ="0") Long id_cat)
+			throws ObjectNotFoundException {
 		List<UsuarioDto> list = servico.findAll();
-		//converte de lista de livro em lista de livros dto
-		List<UsuarioDto> listDTO = list.stream().map(objUsuario -> new UsuarioDto(objUsuario)).collect(Collectors.toList());
-		//return ResponseEntity.ok().body(objProduto);
+		List<UsuarioDto> listDTO = list.stream().map(objUsuario ->
+				new UsuarioDto(objUsuario)).collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDTO);
 	}
 
 	@GetMapping (value = "/{id}")// busca geral
-	public ResponseEntity<Usuario> findById(@PathVariable Long id) throws ObjectNotFoundException, javassist.tools.rmi.ObjectNotFoundException {
+	public ResponseEntity<Usuario> findById(@PathVariable Long id)
+			throws ObjectNotFoundException, javassist.tools.rmi.ObjectNotFoundException {
 		Usuario objUsuario = servico.findById(id);
 		return ResponseEntity.ok().body(objUsuario);
 	}
