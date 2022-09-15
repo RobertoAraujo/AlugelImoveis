@@ -1,6 +1,7 @@
 package com.poshyweb.aluguelapp.server;
 
 import com.poshyweb.aluguelapp.dto.UsuarioDto;
+import javassist.tools.rmi.ObjectNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +11,7 @@ import com.poshyweb.aluguelapp.model.Usuario;
 import com.poshyweb.aluguelapp.repository.UsuarioRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuariosService {
@@ -27,9 +29,9 @@ public class UsuariosService {
 		return null;
     }
 
-//	public Usuario findById(Long id) {
-//		Optional<Usuario> objUsuario = repository.findById(id);
-//		Usuario usuario = objUsuario.orElseThrow(() -> new ObjectNotFoundException("Produto não encontrado!  id:" + id + " tipo: " + Usuario.class.getName()));
-//		return usuario;
-//	}
+	public Usuario findById(Long id) throws ObjectNotFoundException {
+		Optional<Usuario> objUsuario = repository.findById(id);
+		Usuario usuario = objUsuario.orElseThrow(() -> new ObjectNotFoundException("Produto não encontrado!  id:" + id + " tipo: " + Usuario.class.getName()));
+		return usuario;
+	}
 }

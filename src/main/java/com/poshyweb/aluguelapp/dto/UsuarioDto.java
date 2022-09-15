@@ -27,6 +27,9 @@ public class UsuarioDto implements Serializable {
         this.tipoUsuarios = tipoUsuarios;
     }
 
+    public UsuarioDto(UsuarioDto objUsuario) {
+    }
+
     public Long getId() {
         return id;
     }

@@ -34,7 +34,7 @@ public class IndexController {
 	}
 
 	@GetMapping (value = "/{id}")// busca geral
-	public ResponseEntity<Usuario> findById(@PathVariable Long id) throws ObjectNotFoundException {
+	public ResponseEntity<Usuario> findById(@PathVariable Long id) throws ObjectNotFoundException, javassist.tools.rmi.ObjectNotFoundException {
 		Usuario objUsuario = servico.findById(id);
 		return ResponseEntity.ok().body(objUsuario);
 	}

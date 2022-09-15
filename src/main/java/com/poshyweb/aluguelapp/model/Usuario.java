@@ -1,19 +1,15 @@
 package com.poshyweb.aluguelapp.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Usuario implements Serializable{
-
 	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -27,6 +23,13 @@ public class Usuario implements Serializable{
 	private String senha;
 	@Column 
 	private int tipoUsuarios;
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "tb_user_role",
+			joinColumns = @JoinColumn(name = "user_id"),
+			inverseJoinColumns = @JoinColumn(name = "role_id")
+	)
+	private Set<Role> roles = new HashSet<>();
 	
 	public Long getId() {
 		return id;
@@ -67,7 +70,11 @@ public class Usuario implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(email, id, primeiroNome, senha, tipoUsuarios, ultimoNome);
