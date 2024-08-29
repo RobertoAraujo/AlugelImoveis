@@ -1,4 +1,4 @@
-### App de Alugueu de Imóveis.
+### App de Aluguel de Imóveis.
 
 o projeto se encontra-se em fase de desenvolvimento.
 ![image](https://user-images.githubusercontent.com/34004001/133292670-c83c6330-c5a5-4f1a-a8f3-fa15b085a767.png)
